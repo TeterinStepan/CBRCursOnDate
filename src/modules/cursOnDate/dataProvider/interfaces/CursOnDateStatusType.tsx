@@ -1,0 +1,1 @@
+export type CursOnDateStatusType = 'empty'|'pending'|'idle'|'error'
