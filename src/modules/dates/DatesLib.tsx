@@ -19,3 +19,10 @@ export const getFormattedDate = (
 
 
 export const getDateFormatted = (date:Date = new Date()) => getFormattedDate(date.getDate(), date.getMonth(), date.getFullYear())
+
+export const getTimeFormatted = (dateTime: Date = new Date()) => {
+    const hoursFormatted = dateTime.getHours() < 10 ? '0' + dateTime.getHours() : dateTime.getHours();
+    const minuteFormatted = dateTime.getMinutes() < 10 ? '0' + dateTime.getMinutes() : dateTime.getMinutes();
+    const secondFormatted = dateTime.getSeconds() < 10 ? '0' + dateTime.getSeconds() : dateTime.getSeconds();
+    return hoursFormatted + ':' + minuteFormatted + ':' + secondFormatted;
+}
